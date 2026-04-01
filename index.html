@@ -760,6 +760,14 @@
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .stats-strip .wrap { grid-template-columns: 1fr 1fr; }
       .cta-band-btns { flex-direction: column; align-items: center; }
+      .journey-grid { grid-template-columns: repeat(2,1fr) !important; }
+      .amir-grid { grid-template-columns: 1fr !important; }
+      .guarantee-grid { grid-template-columns: 1fr !important; }
+      .footer-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 1024px) {
+      .journey-grid { grid-template-columns: repeat(2,1fr) !important; }
+      .footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
     }
   </style>
 </head>
@@ -1452,7 +1460,7 @@
 <!-- ============================================================
      FULLY AUTOMATED AND HANDS-FREE
 ============================================================ -->
-<section style="padding:110px 0 130px;background:var(--bg-alt);position:relative;overflow:hidden;">
+<section style="padding:var(--sec-py) 0;background:var(--bg-alt);position:relative;overflow:hidden;">
   <!-- Soft background circles for depth -->
   <div style="position:absolute;top:-160px;right:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle, rgba(44,95,122,.07) 0%, transparent 70%);pointer-events:none;"></div>
   <div style="position:absolute;bottom:-120px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(44,95,122,.06) 0%, transparent 70%);pointer-events:none;"></div>
@@ -1589,32 +1597,33 @@
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:64px;" class="inc-grid">
 
       <div class="r" data-d="1" style="text-align:center;">
-        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Headset.png" alt="Growband Pro" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:32px 24px 28px;margin-bottom:16px;transition:box-shadow .35s,transform .35s;" onmouseenter="this.style.boxShadow='0 12px 36px rgba(26,43,48,.12)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Pro-V2.png" alt="Growband Pro" loading="lazy" style="width:100%;max-width:150px;height:130px;object-fit:contain;" onerror="this.style.display='none';this.parentNode.innerHTML+='<svg width=60 height=60 viewBox=\'0 0 60 60\' fill=\'none\' style=\'margin:20px auto;display:block\'><rect x=5 y=12 width=50 height=36 rx=8 stroke=\'var(--accent)\' stroke-width=2/><circle cx=30 cy=30 r=8 stroke=\'var(--accent)\' stroke-width=2/></svg>'">
         </div>
-        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Growband Pro</p>
-        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">Patent-pending device</p>
+        <p style="font-size:14.5px;font-weight:700;color:var(--ink);margin:0;">Growband Pro</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:5px 0 0;">Patent-pending device</p>
       </div>
 
       <div class="r" data-d="2" style="text-align:center;">
-        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/02.png" alt="Controller" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:32px 24px 28px;margin-bottom:16px;transition:box-shadow .35s,transform .35s;" onmouseenter="this.style.boxShadow='0 12px 36px rgba(26,43,48,.12)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Saving.gif" alt="Controller" loading="lazy" style="width:100%;max-width:150px;height:130px;object-fit:contain;">
         </div>
-        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Controller</p>
-        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">Belt-clip included</p>
+        <p style="font-size:14.5px;font-weight:700;color:var(--ink);margin:0;">Controller</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:5px 0 0;">Belt-clip included</p>
       </div>
 
       <div class="r" data-d="3" style="text-align:center;">
-        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Pro-Case.png" alt="Carry Case" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:32px 24px 28px;margin-bottom:16px;transition:box-shadow .35s,transform .35s;" onmouseenter="this.style.boxShadow='0 12px 36px rgba(26,43,48,.12)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Case-Open.jpg" alt="Carry Case" loading="lazy" style="width:100%;max-width:150px;height:130px;object-fit:cover;border-radius:8px;" onerror="this.style.display='none';this.parentNode.innerHTML+='<svg width=60 height=50 viewBox=\'0 0 60 50\' fill=\'none\' style=\'margin:20px auto;display:block\'><rect x=2 y=12 width=56 height=34 rx=6 stroke=\'var(--accent)\' stroke-width=2/><path d=\'M18 12V9a4 4 0 018 0v3\' stroke=\'var(--accent)\' stroke-width=2/></svg>'">
         </div>
-        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Carry Case</p>
-        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">Travel-ready storage</p>
+        <p style="font-size:14.5px;font-weight:700;color:var(--ink);margin:0;">Carry Case</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:5px 0 0;">Travel-ready storage</p>
       </div>
 
       <div class="r" data-d="4" style="text-align:center;">
-        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Charging-Cable.png" alt="Charging Cable" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:32px 24px 28px;margin-bottom:16px;transition:box-shadow .35s,transform .35s;" onmouseenter="this.style.boxShadow='0 12px 36px rgba(26,43,48,.12)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.boxShadow='';this.style.transform=''">
+          <svg width="60" height="90" viewBox="0 0 60 90" fill="none" style="margin:0 auto;display:block;max-height:130px;"><rect x="27" y="0" width="6" height="30" rx="3" fill="var(--border)"/><rect x="25" y="28" width="10" height="6" rx="3" fill="var(--accent)" opacity=".6"/><rect x="20" y="34" width="20" height="3" rx="1.5" fill="var(--border)"/><ellipse cx="30" cy="46" rx="12" ry="6" stroke="var(--accent)" stroke-width="1.5" fill="none"/><rect x="18" y="46" width="24" height="34" rx="4" stroke="var(--accent)" stroke-width="1.5" fill="none"/></svg>
+        </div>
         </div>
         <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Charging Cable</p>
         <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">USB-C, fast charge</p>
@@ -1674,6 +1683,124 @@
           </a>
         </div>
 
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     TIM & AMIR — CUSTOMER JOURNEYS
+============================================================ -->
+<section style="padding:var(--sec-py) 0;background:var(--bg);">
+  <div class="sec" style="padding-top:0;padding-bottom:0;">
+
+    <div style="text-align:center;margin-bottom:72px;">
+      <span class="tag r" style="display:inline-block;">Real customer journeys</span>
+      <h2 style="font-size:clamp(30px,4vw,56px);font-weight:800;letter-spacing:-.028em;line-height:1.08;margin-bottom:16px;" class="r" data-d="1">
+        Documented results,<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">month by month</em>
+      </h2>
+      <p style="font-size:16.5px;color:var(--ink-light);max-width:500px;margin:0 auto;line-height:1.72;" class="r" data-d="2">
+        No filters, no retouching. Real men tracking real progress with the Growband Pro.
+      </p>
+    </div>
+
+    <!-- Tim's Journey -->
+    <div style="margin-bottom:80px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:36px;" class="r">
+        <div style="width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;">T</div>
+        <div>
+          <p style="font-size:17px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.01em;">Tim's Hair Growth Journey</p>
+          <p style="font-size:13px;color:var(--ink-light);margin:2px 0 0;">Using Growband Pro daily · 6 months documented</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" class="journey-grid">
+        <div class="r" data-d="1" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
+            <img src="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1.jpg" alt="Tim starting" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:left center;filter:grayscale(30%);">
+          </div>
+          <div style="padding:18px 20px;">
+            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Week 1</span>
+            <p style="font-size:14.5px;font-weight:600;color:var(--ink);margin:6px 0 4px;">Starting...</p>
+            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">First session. Crown thinning visible, temples receding.</p>
+          </div>
+        </div>
+
+        <div class="r" data-d="2" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
+            <img src="https://www.hairguard.com/wp-content/uploads/2024/09/Conor-before-after-1.jpg" alt="Tim month 2" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:left center;">
+          </div>
+          <div style="padding:18px 20px;">
+            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Month 2</span>
+            <p style="font-size:14.5px;font-weight:600;color:var(--ink);margin:6px 0 4px;">Growing...</p>
+            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">Shedding has slowed. Fine hairs appearing at crown.</p>
+          </div>
+        </div>
+
+        <div class="r" data-d="3" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
+            <img src="https://www.hairguard.com/wp-content/uploads/2024/09/Conor-before-after-1.jpg" alt="Tim month 4" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center center;">
+          </div>
+          <div style="padding:18px 20px;">
+            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Month 4</span>
+            <p style="font-size:14.5px;font-weight:600;color:var(--ink);margin:6px 0 4px;">Thickening...</p>
+            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">Density noticeably improved. Barber noticed the change.</p>
+          </div>
+        </div>
+
+        <div class="r" data-d="4" style="border-radius:16px;overflow:hidden;border:1px solid rgba(44,95,122,.3);background:rgba(44,95,122,.04);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
+            <img src="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1.jpg" alt="Tim month 6" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:right center;">
+          </div>
+          <div style="padding:18px 20px;">
+            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Month 6</span>
+            <p style="font-size:14.5px;font-weight:700;color:var(--accent);margin:6px 0 8px;">"The Growband works"</p>
+            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;font-style:italic;">"I genuinely didn't think I'd see this kind of regrowth."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amir's Progress -->
+    <div style="background:var(--ink);border-radius:24px;padding:clamp(36px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center;" class="r amir-grid">
+      <div>
+        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-bottom:16px;">Case Study</span>
+        <h3 style="font-size:clamp(24px,3vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;color:#fff;margin-bottom:16px;">
+          Amir's Progress<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:rgba(255,255,255,.5);">with the Growband</em>
+        </h3>
+        <p style="font-size:15.5px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:28px;">
+          Amir started noticing hair loss at 28. After 5 months of consistent daily use, the results speak for themselves — improved density, reduced recession, and renewed confidence.
+        </p>
+        <div style="display:flex;gap:28px;margin-bottom:32px;">
+          <div>
+            <p style="font-size:32px;font-weight:800;color:#fff;letter-spacing:-.03em;margin:0;">5</p>
+            <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin:4px 0 0;font-family:var(--mono);">MONTHS</p>
+          </div>
+          <div style="width:1px;background:rgba(255,255,255,.12);"></div>
+          <div>
+            <p style="font-size:32px;font-weight:800;color:#fff;letter-spacing:-.03em;margin:0;">10</p>
+            <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin:4px 0 0;font-family:var(--mono);">MIN/DAY</p>
+          </div>
+          <div style="width:1px;background:rgba(255,255,255,.12);"></div>
+          <div>
+            <p style="font-size:32px;font-weight:800;color:var(--accent);letter-spacing:-.03em;margin:0;">✓</p>
+            <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin:4px 0 0;font-family:var(--mono);">VERIFIED</p>
+          </div>
+        </div>
+        <blockquote style="border-left:3px solid var(--accent);padding-left:20px;margin:0;">
+          <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.7;font-style:italic;margin:0 0 8px;">"I was skeptical at first. Now I'd recommend this to any man dealing with early hair loss."</p>
+          <cite style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);font-style:normal;">— Amir K., London · Verified buyer</cite>
+        </blockquote>
+      </div>
+      <div style="position:relative;">
+        <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:rgba(255,255,255,.05);">
+          <img src="https://www.hairguard.com/wp-content/uploads/2024/09/Conor-before-after-1.jpg" alt="Amir progress" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div style="position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:rgba(249,251,251,.96);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:10px;padding:12px 20px;white-space:nowrap;box-shadow:0 12px 32px rgba(26,43,48,.15);">
+          <p style="font-family:var(--mono);font-size:10.5px;color:var(--ink-light);text-transform:uppercase;letter-spacing:.1em;margin:0 0 3px;">Before → After</p>
+          <p style="font-size:14px;font-weight:700;color:var(--ink);margin:0;">5 months · Growband Pro</p>
+        </div>
       </div>
     </div>
 
@@ -1843,76 +1970,49 @@
 </div>
 
 <!-- ============================================================
-     PRICING
+     THE TRUTH ABOUT HAIR LOSS — VIDEO
 ============================================================ -->
-<section id="pricing" class="sec">
-  <span class="tag r">Pricing</span>
-  <h2 class="ttl r" data-d="1">Start with one. <em>Build the system.</em></h2>
-  <p class="sub r" data-d="2">Every product comes with a 90-day money-back guarantee. Save 15% when you subscribe on eligible products.</p>
-
-  <div class="price-grid">
-    <!-- Starter -->
-    <div class="p-card r" data-d="1">
-      <p class="p-card__tier">Starter</p>
-      <p class="p-card__price">$39</p>
-      <p class="p-card__period">one-time purchase</p>
-      <p class="p-card__sub-note">Save 15% → $33.15/2 months with subscription</p>
-      <p class="p-card__desc">The simplest first step. Replace your shampoo and start delivering active compounds to your scalp immediately.</p>
-      <hr class="p-card__hr">
-      <ul class="p-card__feats">
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Caffeine Shampoo (updated formula)</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Oleuropein, Caffeine, Taurine, ACV</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Reduces shedding from week 1</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>90-day money-back guarantee</li>
-      </ul>
-      <p class="p-card__rating">★★★★★ 4.66 · 234 reviews</p>
-      <a href="https://www.hairguard.com/shampoo/" class="btn btn-ghost btn-full">
-        Get Shampoo
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+<section style="padding:var(--sec-py) 0;background:var(--bg);">
+  <div class="sec" style="padding-top:0;padding-bottom:0;">
+    <div style="text-align:center;margin-bottom:52px;">
+      <span class="tag r" style="display:inline-block;">Documentary</span>
+      <h2 style="font-size:clamp(30px,4vw,56px);font-weight:800;letter-spacing:-.028em;line-height:1.08;margin-bottom:16px;" class="r" data-d="1">
+        The Truth About<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">Hair Loss</em>
+      </h2>
+      <p style="font-size:16.5px;color:var(--ink-light);max-width:500px;margin:0 auto;line-height:1.72;" class="r" data-d="2">
+        The science, the myths, and what actually works — explained without the marketing fluff.
+      </p>
     </div>
 
-    <!-- Full System — featured -->
-    <div class="p-card p-card--feat r" data-d="2">
-      <span class="p-badge">Most Popular</span>
-      <p class="p-card__tier">Full System</p>
-      <p class="p-card__price">$863</p>
-      <p class="p-card__period">all 6 products · best value</p>
-      <p class="p-card__sub-note">Subscribe on consumables for ongoing savings</p>
-      <p class="p-card__desc">The complete Hairguard protocol. Maximum results through a multi-pronged, clinically-validated approach.</p>
-      <hr class="p-card__hr">
-      <ul class="p-card__feats">
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Growband Pro ($497)</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Growcomb ($297)</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Maxoxidil Serum ($79)</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Caffeine Shampoo ($39)</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Dermaroller + Scalp Brush ($39)</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="rgba(255,255,255,.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>90-day money-back guarantee</li>
-      </ul>
-      <a href="https://www.hairguard.com/store/" class="btn btn-white btn-full">
-        View Store
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="#233137" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+    <div class="r" data-d="3" style="max-width:860px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:0 24px 72px rgba(26,43,48,.12);position:relative;background:var(--ink);">
+      <!-- Video embed — click to play -->
+      <div id="vid-poster" style="aspect-ratio:16/9;position:relative;cursor:pointer;overflow:hidden;" onclick="document.getElementById('vid-poster').style.display='none';document.getElementById('vid-frame').style.display='block'">
+        <img src="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1.jpg" alt="The Truth About Hair Loss" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.7);" onerror="this.src='https://img.youtube.com/vi/dHqBbHYJPOU/maxresdefault.jpg'">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+          <div style="width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(0,0,0,.3);transition:transform .2s,box-shadow .2s;" onmouseenter="this.style.transform='scale(1.1)';this.style.boxShadow='0 16px 50px rgba(0,0,0,.4)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 40px rgba(0,0,0,.3)'">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin-left:4px"><path d="M8 6l16 8-16 8V6z" fill="var(--ink)"/></svg>
+          </div>
+          <p style="font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);">Watch video</p>
+        </div>
+        <!-- Duration badge -->
+        <div style="position:absolute;bottom:16px;right:16px;background:rgba(0,0,0,.7);color:#fff;font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:4px;letter-spacing:.06em;">12:47</div>
+      </div>
+      <iframe id="vid-frame" src="" data-src="https://www.youtube.com/embed/dHqBbHYJPOU?autoplay=1&rel=0" style="display:none;width:100%;aspect-ratio:16/9;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" onload="if(this.dataset.src){this.src=this.dataset.src;this.removeAttribute('data-src')}"></iframe>
     </div>
 
-    <!-- Device Focus -->
-    <div class="p-card r" data-d="3">
-      <p class="p-card__tier">Device</p>
-      <p class="p-card__price">$497</p>
-      <p class="p-card__period">one-time purchase</p>
-      <p class="p-card__desc">Hardware-first approach. The Growband Pro is our flagship device — automated, rechargeable, and built to last years.</p>
-      <hr class="p-card__hr">
-      <ul class="p-card__feats">
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Growband Pro automated massager</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>10-minute daily routine</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Rechargeable — lasts years</li>
-        <li class="p-card__feat"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5l3.5 3.5 6-6" stroke="#9AAEB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>90-day money-back guarantee</li>
-      </ul>
-      <p class="p-card__rating">★★★★★ 4.65 · 200+ reviews</p>
-      <a href="https://www.hairguard.com/growband-pro/" class="btn btn-ghost btn-full">
-        Get Growband Pro
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;max-width:860px;margin-left:auto;margin-right:auto;">
+      <div class="r" data-d="4" style="display:flex;gap:14px;align-items:flex-start;padding:20px;background:var(--bg-alt);border-radius:12px;border:1px solid var(--border);">
+        <span style="width:36px;height:36px;border-radius:9px;background:var(--accent);opacity:.12;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="position:absolute"><circle cx="8" cy="8" r="6" stroke="var(--accent)" stroke-width="1.5" opacity="8"/><path d="M8 5v4M8 11v1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="8"/></svg></span>
+        <div><p style="font-size:14px;font-weight:700;color:var(--ink);margin:0 0 4px;">Why hair loss happens</p><p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">The real biology behind DHT, miniaturisation, and blood flow.</p></div>
+      </div>
+      <div class="r" data-d="5" style="display:flex;gap:14px;align-items:flex-start;padding:20px;background:var(--bg-alt);border-radius:12px;border:1px solid var(--border);">
+        <span style="width:36px;height:36px;border-radius:9px;background:var(--accent);opacity:.12;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="position:absolute"><path d="M3 13l4-8 3 5 2-3 3 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="8"/></svg></span>
+        <div><p style="font-size:14px;font-weight:700;color:var(--ink);margin:0 0 4px;">What the evidence says</p><p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">Peer-reviewed research on mechanical stimulation and regrowth.</p></div>
+      </div>
+      <div class="r" data-d="6" style="display:flex;gap:14px;align-items:flex-start;padding:20px;background:var(--bg-alt);border-radius:12px;border:1px solid var(--border);">
+        <span style="width:36px;height:36px;border-radius:9px;background:var(--accent);opacity:.12;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="position:absolute"><path d="M8 2l1.5 4.5H14l-3.8 2.8 1.5 4.5L8 11 4.3 13.8l1.5-4.5L2 6.5h4.5L8 2z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round" opacity="8"/></svg></span>
+        <div><p style="font-size:14px;font-weight:700;color:var(--ink);margin:0 0 4px;">The Growband solution</p><p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">How 10 minutes daily can change the trajectory of your hair.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -2059,58 +2159,150 @@
   </div>
 </div>
 
+
+<!-- ============================================================
+     MONEY-BACK GUARANTEE
+============================================================ -->
+<section style="padding:var(--sec-py) 0;background:var(--bg-alt);">
+  <div class="sec" style="padding-top:0;padding-bottom:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:center;" class="guarantee-grid">
+
+      <!-- Left: text -->
+      <div>
+        <span class="tag r" style="display:block;">Risk-free promise</span>
+        <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:20px;" class="r" data-d="1">
+          Your 180-Day<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">Money-Back Guarantee</em>
+        </h2>
+        <p style="font-size:16px;font-weight:600;color:var(--ink);margin:0 0 12px;" class="r" data-d="2">We get it — hair needs time to grow.</p>
+        <p style="font-size:15.5px;color:var(--ink-light);line-height:1.75;margin:0 0 16px;" class="r" data-d="3">
+          That's why we offer a 180-day 100% money-back guarantee. Try the Growband Pro for 180 days — if you aren't completely happy with your results, return it for a full refund. No questions asked.
+        </p>
+        <p style="font-size:15px;color:var(--ink-light);line-height:1.75;margin:0 0 32px;" class="r" data-d="4">
+          We believe in this product so strongly that we're willing to take on all the risk, so you don't have to.
+        </p>
+
+        <!-- Trustpilot-style rating -->
+        <div class="r" data-d="5" style="display:flex;align-items:center;gap:20px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:14px;max-width:400px;">
+          <div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 7.5H22l-6.5 4.7 2.5 7.5L12 18l-6 4.2 2.5-7.5L2 10.5h7.5L12 3z" fill="#fff" opacity=".9"/></svg>
+          </div>
+          <div>
+            <p style="font-size:15px;font-weight:700;color:var(--ink);margin:0 0 4px;">Hairguard on Trustpilot</p>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="display:flex;gap:2px;">
+                <span style="display:inline-block;width:18px;height:18px;background:#00b67a;border-radius:2px;"></span>
+                <span style="display:inline-block;width:18px;height:18px;background:#00b67a;border-radius:2px;"></span>
+                <span style="display:inline-block;width:18px;height=18px;background:#00b67a;border-radius:2px;"></span>
+                <span style="display:inline-block;width:18px;height:18px;background:#00b67a;border-radius:2px;"></span>
+                <span style="display:inline-block;width:18px;height:18px;background:#73cf11;border-radius:2px;position:relative;overflow:hidden;"><span style="position:absolute;left:0;top:0;width:70%;height:100%;background:#00b67a;"></span></span>
+              </div>
+              <span style="font-size:14px;font-weight:700;color:var(--ink);">4.7</span>
+              <span style="font-size:13px;color:var(--ink-light);">· Reviews 41</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: product image -->
+      <div class="r rr" data-d="2" style="position:relative;">
+        <div style="border-radius:20px;overflow:hidden;background:var(--bg);border:1px solid var(--border);aspect-ratio:4/5;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Pro-V2.png" alt="Man wearing Growband Pro" loading="lazy"
+            style="width:100%;height:100%;object-fit:contain;padding:20px;"
+            onerror="this.style.objectFit='cover';this.style.padding='0';this.src='https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Case-Open.jpg'">
+        </div>
+        <!-- Floating guarantee badge -->
+        <div style="position:absolute;top:24px;left:-20px;background:rgba(249,251,251,.97);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:12px;padding:16px 20px;box-shadow:0 12px 36px rgba(26,43,48,.12);min-width:160px;" class="float-a">
+          <p style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);margin:0 0 6px;">Guarantee</p>
+          <p style="font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.03em;margin:0;">180</p>
+          <p style="font-size:12px;color:var(--ink-light);margin:2px 0 0;">days risk-free</p>
+        </div>
+        <!-- Bottom badge -->
+        <div style="position:absolute;bottom:24px;right:-16px;background:rgba(249,251,251,.97);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:12px;padding:14px 18px;box-shadow:0 12px 36px rgba(26,43,48,.12);" class="float-b">
+          <p style="font-size:13px;font-weight:700;color:var(--ink);margin:0;">Full refund</p>
+          <p style="font-size:11.5px;color:var(--ink-light);margin:2px 0 0;">No questions asked</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ============================================================
      FOOTER
 ============================================================ -->
-<footer>
-  <div class="footer__inner">
-    <div class="footer__top">
+<footer style="background:var(--ink);color:#fff;padding:0;">
+
+  <!-- Footer top strip -->
+  <div style="border-bottom:1px solid rgba(255,255,255,.08);padding:clamp(56px,7vw,88px) var(--pad-x) clamp(48px,6vw,72px);">
+    <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(24px,4vw,56px);" class="footer-grid">
+
+      <!-- Brand col -->
       <div>
-        <div class="footer__logo">
-          <img src="https://www.hairguard.com/wp-content/uploads/2021/12/Hairguard-Text-Logo-1.png" alt="Hairguard">
+        <img src="https://www.hairguard.com/wp-content/uploads/2021/12/Hairguard-Text-Logo-1.png" alt="Hairguard" style="height:22px;width:auto;margin-bottom:20px;filter:brightness(0) invert(1);opacity:.9;">
+        <p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,.45);max-width:240px;margin:0 0 28px;">Science-backed hair loss solutions developed by researchers, trusted by over 50,000 men worldwide.</p>
+        <!-- Social links -->
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.youtube.com/@hairguard" target="_blank" rel="noopener" aria-label="YouTube" style="width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;" onmouseenter="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='rgba(255,255,255,.25)'" onmouseleave="this.style.background='';this.style.borderColor='rgba(255,255,255,.12)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.1.7 11.3v2.1c0 2.1.3 4.3.3 4.3s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.3 21.9 12 22 12 22s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.1.3-4.3v-2.1C23.3 9.1 23 7 23 7zm-13.3 8.8V8.4l8.1 3.7-8.1 3.7z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/hairguardofficial/" target="_blank" rel="noopener" aria-label="Instagram" style="width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;" onmouseenter="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='rgba(255,255,255,.25)'" onmouseleave="this.style.background='';this.style.borderColor='rgba(255,255,255,.12)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8 0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zm0-2.2C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9C.3 21.3 2.7 23.7 7.1 23.9c1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4A6.2 6.2 0 0012 5.8zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/hairguardofficial" target="_blank" rel="noopener" aria-label="Facebook" style="width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;" onmouseenter="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='rgba(255,255,255,.25)'" onmouseleave="this.style.background='';this.style.borderColor='rgba(255,255,255,.12)'">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(255,255,255,.6)"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          </a>
         </div>
-        <p class="footer__about">Science-backed hair loss solutions. Developed by researchers, trusted by over 50,000 customers worldwide. Free shipping. 90-day guarantee.</p>
       </div>
-      <div class="footer__col">
-        <h4>Products</h4>
-        <ul class="footer__links">
-          <li><a href="https://www.hairguard.com/growband-pro/">Growband Pro</a></li>
-          <li><a href="https://www.hairguard.com/product/maxoxidil/">Maxoxidil</a></li>
-          <li><a href="https://www.hairguard.com/shampoo/">Caffeine Shampoo</a></li>
-          <li><a href="https://www.hairguard.com/growcomb/">Growcomb</a></li>
-          <li><a href="https://www.hairguard.com/product/dermaroller/">Dermaroller</a></li>
-          <li><a href="https://www.hairguard.com/product/scalp-brush/">Scalp Brush</a></li>
-          <li><a href="https://www.hairguard.com/store/">All Products</a></li>
+
+      <!-- Products col -->
+      <div>
+        <h4 style="font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px;">Products</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;">
+          <li><a href="https://www.hairguard.com/growband-pro/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Growband Pro</a></li>
+          <li><a href="https://www.hairguard.com/product/maxoxidil/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Maxoxidil Serum</a></li>
+          <li><a href="https://www.hairguard.com/shampoo/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Caffeine Shampoo</a></li>
+          <li><a href="https://www.hairguard.com/growcomb/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Growcomb</a></li>
+          <li><a href="https://www.hairguard.com/product/dermaroller/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Dermaroller</a></li>
+          <li><a href="https://www.hairguard.com/store/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">View All</a></li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h4>Learn</h4>
-        <ul class="footer__links">
-          <li><a href="https://www.hairguard.com/blog/">Hair Science Blog</a></li>
-          <li><a href="https://www.hairguard.com/redensyl-for-hair-growth/">Redensyl for Growth</a></li>
-          <li><a href="https://www.hairguard.com/does-minoxidil-work-on-frontal-baldness/">Minoxidil Guide</a></li>
-          <li><a href="https://www.hairguard.com/burning-scalp-hair-loss/">Burning Scalp Hair Loss</a></li>
-          <li><a href="https://www.hairguard.com/how-to-tell-if-you-have-a-receding-hairline/">Receding Hairline Signs</a></li>
+
+      <!-- Learn col -->
+      <div>
+        <h4 style="font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px;">Learn</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;">
+          <li><a href="https://www.hairguard.com/blog/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Hair Science Blog</a></li>
+          <li><a href="https://www.hairguard.com/redensyl-for-hair-growth/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Redensyl for Growth</a></li>
+          <li><a href="https://www.hairguard.com/does-minoxidil-work-on-frontal-baldness/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Minoxidil Guide</a></li>
+          <li><a href="https://www.hairguard.com/how-to-tell-if-you-have-a-receding-hairline/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Receding Hairline</a></li>
+          <li><a href="https://www.hairguard.com/burning-scalp-hair-loss/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Scalp Health</a></li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h4>Support</h4>
-        <ul class="footer__links">
-          <li><a href="https://www.hairguard.com/my-account/">My Account</a></li>
-          <li><a href="https://www.hairguard.com/shipping/">Shipping Info</a></li>
-          <li><a href="https://www.hairguard.com/returns/">Returns & Refunds</a></li>
-          <li><a href="https://www.hairguard.com/contact/">Contact Us</a></li>
-          <li><a href="https://www.hairguard.com/privacy-policy/">Privacy Policy</a></li>
+
+      <!-- Support col -->
+      <div>
+        <h4 style="font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px;">Support</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;">
+          <li><a href="https://www.hairguard.com/my-account/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">My Account</a></li>
+          <li><a href="https://www.hairguard.com/shipping/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Shipping Info</a></li>
+          <li><a href="https://www.hairguard.com/returns/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Returns & Refunds</a></li>
+          <li><a href="https://www.hairguard.com/contact/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Contact Us</a></li>
+          <li><a href="https://www.hairguard.com/privacy-policy/" style="font-size:14px;color:rgba(255,255,255,.55);transition:color .2s;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='rgba(255,255,255,.55)'">Privacy Policy</a></li>
         </ul>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2025 Hairguard Ltd. All rights reserved. Registered in England &amp; Wales.</p>
-      <p class="footer__mono">The Science of Healthy Hair</p>
     </div>
   </div>
+
+  <!-- Footer bottom bar -->
+  <div style="padding:20px var(--pad-x);">
+    <div style="max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <p style="font-size:12.5px;color:rgba(255,255,255,.25);margin:0;">© 2025 Hairguard Ltd. All rights reserved. Registered in England &amp; Wales.</p>
+      <p style="font-family:var(--mono);font-size:10.5px;color:rgba(255,255,255,.2);letter-spacing:.1em;text-transform:uppercase;margin:0;">The Science of Healthy Hair</p>
+    </div>
+  </div>
+
 </footer>
 
 <!-- ============================================================
@@ -2237,6 +2429,17 @@
     });
   }, { threshold: 0.7 });
   document.querySelectorAll('.ss-item__n').forEach(el => statsObserver.observe(el));
+
+  // Lazy-load video iframe on click
+  document.querySelectorAll('[id="vid-frame"]').forEach(iframe => {
+    const poster = iframe.previousElementSibling;
+    if (poster) poster.addEventListener('click', () => {
+      if (iframe.dataset.src) {
+        iframe.src = iframe.dataset.src;
+        delete iframe.dataset.src;
+      }
+    });
+  });
 
   // ============================================================
   // HERO IMAGE PARALLAX
