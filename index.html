@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Non-blocking font load -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Mono:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Mono:wght@400&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=DM+Mono:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=DM+Mono:wght@400&display=swap"></noscript>
   <style>
     /* ============================================================
        TOKENS
     ============================================================ */
     :root {
-      --ink:       #233137;
-      --ink-2:     #4A6470;
-      --ink-light: #9AAEB5;
+      --ink:       #1A2B30;
+      --ink-2:     #3D5560;
+      --ink-light: #5E7A84;
       --bg:        #F9FBFB;
       --bg-alt:    #EEF4F6;
       --border:    #DDE7EA;
@@ -25,9 +25,9 @@
       --max-w:     1200px;
       --pad-x:     clamp(20px,4vw,48px);
       --sec-py:    clamp(72px,8vw,120px);
-      --sans:      'Plus Jakarta Sans', -apple-system, sans-serif;
-      --serif:     'Cormorant Garamond', Georgia, serif;
-      --mono:      'DM Mono', monospace;
+      --sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --serif:     'Playfair Display', Georgia, serif;
+      --mono:      'DM Mono', 'Courier New', monospace;
     }
 
     /* ============================================================
@@ -37,7 +37,12 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: var(--sans); background: var(--bg); color: var(--ink);
-      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
@@ -94,8 +99,8 @@
       font-weight: 300; font-size: 1.06em; color: var(--accent);
     }
     .sub {
-      font-size: 16px; line-height: 1.72; color: var(--ink-light);
-      max-width: 500px; margin-bottom: 44px;
+      font-size: 17px; line-height: 1.75; color: var(--ink-light);
+      max-width: 520px; margin-bottom: 44px; font-weight: 400;
     }
 
     /* ============================================================
@@ -271,7 +276,7 @@
     .prod-card__body { padding: 24px; }
     .prod-card__cat { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; color: var(--ink-light); margin-bottom: 8px; }
     .prod-card__name { font-size: 20px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 10px; }
-    .prod-card__desc { font-size: 13.5px; line-height: 1.68; color: var(--ink-light); margin-bottom: 20px; }
+    .prod-card__desc { font-size: 15px; line-height: 1.72; color: var(--ink-light); margin-bottom: 20px; font-weight: 400; }
     .prod-card__foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
     .prod-card__price { font-size: 22px; font-weight: 700; }
     .prod-card__price s { font-size: 14px; color: var(--ink-light); font-weight: 400; margin-right: 4px; }
@@ -317,8 +322,8 @@
       margin-bottom: 12px; color: var(--ink);
     }
     .ing-item__desc {
-      font-size: 14.5px; line-height: 1.72; color: var(--ink-light);
-      margin-bottom: 20px;
+      font-size: 15.5px; line-height: 1.75; color: var(--ink-light);
+      margin-bottom: 20px; font-weight: 400;
     }
     .ing-item__study {
       display: inline-flex; align-items: center; gap: 6px;
@@ -377,8 +382,8 @@
     .step:hover .step__icon { background: rgba(44,95,122,.08); border-color: rgba(44,95,122,.2); }
     .step:hover .step__icon svg path,
     .step:hover .step__icon svg circle { stroke: var(--accent); }
-    .step__title { font-size: 20px; font-weight: 700; letter-spacing: -.012em; margin-bottom: 12px; }
-    .step__desc { font-size: 14px; line-height: 1.75; color: var(--ink-light); }
+    .step__title { font-size: 21px; font-weight: 700; letter-spacing: -.012em; margin-bottom: 12px; }
+    .step__desc { font-size: 15px; line-height: 1.78; color: var(--ink-light); font-weight: 400; }
 
     /* ============================================================
        RESULTS TIMELINE
@@ -425,7 +430,7 @@
       padding: 24px 28px; width: 330px; flex-shrink: 0;
     }
     .t-card__stars { font-size: 11px; letter-spacing: 2px; color: var(--accent); margin-bottom: 12px; }
-    .t-card__q { font-size: 14px; line-height: 1.68; margin-bottom: 20px; }
+    .t-card__q { font-size: 15px; line-height: 1.72; margin-bottom: 20px; font-weight: 400; }
     .t-card__author { display: flex; align-items: center; gap: 10px; }
     .t-card__av {
       width: 36px; height: 36px; border-radius: 50%; background: var(--border);
@@ -481,7 +486,7 @@
       -webkit-tap-highlight-color: transparent;
     }
     .faq-trigger::-webkit-details-marker { display: none; }
-    .faq-q { font-size: 15.5px; font-weight: 600; letter-spacing: -.004em; line-height: 1.4; }
+    .faq-q { font-size: 16.5px; font-weight: 600; letter-spacing: -.004em; line-height: 1.4; }
     .faq-icon {
       flex-shrink: 0; width: 24px; height: 24px; border: 1px solid var(--border);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -489,7 +494,7 @@
     }
     details[open] .faq-icon { transform: rotate(45deg); background: var(--ink); border-color: var(--ink); }
     details[open] .faq-icon svg path { stroke: #fff; }
-    .faq-a { padding-bottom: 22px; font-size: 14.5px; line-height: 1.75; color: var(--ink-light); }
+    .faq-a { padding-bottom: 22px; font-size: 15.5px; line-height: 1.78; color: var(--ink-light); font-weight: 400; }
 
     /* ============================================================
        CTA BAND
