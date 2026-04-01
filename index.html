@@ -1691,114 +1691,140 @@
 <!-- ============================================================
      TIM & AMIR — CUSTOMER JOURNEYS
 ============================================================ -->
-<section style="padding:var(--sec-py) 0;background:var(--bg);">
+<section style="padding:var(--sec-py) 0 calc(var(--sec-py) + 20px);background:var(--bg);">
   <div class="sec" style="padding-top:0;padding-bottom:0;">
 
-    <div style="text-align:center;margin-bottom:72px;">
-      <span class="tag r" style="display:inline-block;">Real customer journeys</span>
-      <h2 style="font-size:clamp(30px,4vw,56px);font-weight:800;letter-spacing:-.028em;line-height:1.08;margin-bottom:16px;" class="r" data-d="1">
-        Documented results,<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">month by month</em>
+    <!-- ── TIM'S JOURNEY ───────────────────────────── -->
+    <div style="text-align:center;margin-bottom:56px;">
+      <span class="tag r" style="display:inline-block;">Real customer journey</span>
+      <h2 style="font-size:clamp(30px,4vw,54px);font-weight:800;letter-spacing:-.028em;line-height:1.08;margin-bottom:12px;" class="r" data-d="1">
+        Tim's Hair Growth Journey
       </h2>
-      <p style="font-size:16.5px;color:var(--ink-light);max-width:500px;margin:0 auto;line-height:1.72;" class="r" data-d="2">
-        No filters, no retouching. Real men tracking real progress with the Growband Pro.
+      <p style="font-size:15.5px;color:var(--ink-light);max-width:440px;margin:0 auto;line-height:1.7;" class="r" data-d="2">
+        No filters, no retouching. Real progress with the Growband Pro.
       </p>
     </div>
 
-    <!-- Tim's Journey -->
-    <div style="margin-bottom:80px;">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:36px;" class="r">
-        <div style="width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;">T</div>
-        <div>
-          <p style="font-size:17px;font-weight:700;color:var(--ink);margin:0;letter-spacing:-.01em;">Tim's Hair Growth Journey</p>
-          <p style="font-size:13px;color:var(--ink-light);margin:2px 0 0;">Using Growband Pro daily · 6 months documented</p>
+    <!-- 4 columns: label top → circle image → caption -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:96px;align-items:start;" class="journey-grid">
+
+      <!-- Starting -->
+      <div class="r" data-d="1" style="text-align:center;">
+        <p style="font-size:clamp(20px,2.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-.02em;margin:0 0 20px;">Starting...</p>
+        <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:3px solid var(--border);box-shadow:0 12px 40px rgba(26,43,48,.1);transition:transform .4s cubic-bezier(.25,.46,.45,.94),box-shadow .4s;" onmouseenter="this.style.transform='scale(1.04)';this.style.boxShadow='0 20px 56px rgba(26,43,48,.16)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 40px rgba(26,43,48,.1)'">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/11/tim-1.jpg" alt="Tim starting" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
+        <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin:16px 0 0;">Week 1 · Thinning crown</p>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" class="journey-grid">
-        <div class="r" data-d="1" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
-            <img src="https://www.hairguard.com/wp-content/uploads/2023/06/JK-Before-After.jpg" alt="Tim starting" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:left center;filter:grayscale(20%);">
-          </div>
-          <div style="padding:18px 20px;">
-            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Week 1</span>
-            <p style="font-size:14.5px;font-weight:600;color:var(--ink);margin:6px 0 4px;">Starting...</p>
-            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">First session. Crown thinning visible, temples receding.</p>
-          </div>
+      <!-- Growing -->
+      <div class="r" data-d="2" style="text-align:center;">
+        <p style="font-size:clamp(20px,2.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-.02em;margin:0 0 20px;">Growing...</p>
+        <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:3px solid var(--border);box-shadow:0 12px 40px rgba(26,43,48,.1);transition:transform .4s cubic-bezier(.25,.46,.45,.94),box-shadow .4s;" onmouseenter="this.style.transform='scale(1.04)';this.style.boxShadow='0 20px 56px rgba(26,43,48,.16)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 40px rgba(26,43,48,.1)'">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/11/tim-2.jpg" alt="Tim growing" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-
-        <div class="r" data-d="2" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
-            <img src="https://www.hairguard.com/wp-content/uploads/2023/06/Luke-1-scaled.jpg" alt="Tim month 2" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
-          </div>
-          <div style="padding:18px 20px;">
-            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Month 2</span>
-            <p style="font-size:14.5px;font-weight:600;color:var(--ink);margin:6px 0 4px;">Growing...</p>
-            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">Shedding has slowed. Fine hairs appearing at crown.</p>
-          </div>
-        </div>
-
-        <div class="r" data-d="3" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--bg-alt);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
-            <img src="https://www.hairguard.com/wp-content/uploads/2023/06/Luke-4-scaled.jpg" alt="Tim month 4" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
-          </div>
-          <div style="padding:18px 20px;">
-            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Month 4</span>
-            <p style="font-size:14.5px;font-weight:600;color:var(--ink);margin:6px 0 4px;">Thickening...</p>
-            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;">Density noticeably improved. Barber noticed the change.</p>
-          </div>
-        </div>
-
-        <div class="r" data-d="4" style="border-radius:16px;overflow:hidden;border:1px solid rgba(44,95,122,.3);background:rgba(44,95,122,.04);transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.1)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-          <div style="aspect-ratio:3/4;overflow:hidden;background:var(--bg-alt);">
-            <img src="https://www.hairguard.com/wp-content/uploads/2025/03/12m.jpg" alt="Tim month 6" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:right center;">
-          </div>
-          <div style="padding:18px 20px;">
-            <span style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;">Month 6</span>
-            <p style="font-size:14.5px;font-weight:700;color:var(--accent);margin:6px 0 8px;">"The Growband works"</p>
-            <p style="font-size:13px;color:var(--ink-light);line-height:1.6;margin:0;font-style:italic;">"I genuinely didn't think I'd see this kind of regrowth."</p>
-          </div>
-        </div>
+        <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin:16px 0 0;">Month 2 · Shedding reduced</p>
       </div>
+
+      <!-- Thickening -->
+      <div class="r" data-d="3" style="text-align:center;">
+        <p style="font-size:clamp(20px,2.4vw,28px);font-weight:800;color:var(--ink);letter-spacing:-.02em;margin:0 0 20px;">Thickening...</p>
+        <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:3px solid var(--border);box-shadow:0 12px 40px rgba(26,43,48,.1);transition:transform .4s cubic-bezier(.25,.46,.45,.94),box-shadow .4s;" onmouseenter="this.style.transform='scale(1.04)';this.style.boxShadow='0 20px 56px rgba(26,43,48,.16)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 40px rgba(26,43,48,.1)'">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/11/tim-3.jpg" alt="Tim thickening" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin:16px 0 0;">Month 4 · Density improved</p>
+      </div>
+
+      <!-- The Growband works -->
+      <div class="r" data-d="4" style="text-align:center;">
+        <p style="font-size:clamp(16px,2vw,22px);font-weight:700;color:var(--ink);letter-spacing:-.015em;margin:0 0 20px;font-style:italic;font-family:var(--serif);">"The Growband works"</p>
+        <div style="width:100%;aspect-ratio:1/1;border-radius:20px;overflow:hidden;border:3px solid rgba(44,95,122,.25);box-shadow:0 12px 40px rgba(26,43,48,.12);transition:transform .4s cubic-bezier(.25,.46,.45,.94),box-shadow .4s;" onmouseenter="this.style.transform='scale(1.04)';this.style.boxShadow='0 20px 56px rgba(26,43,48,.18)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 40px rgba(26,43,48,.12)'">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/12/tim-coffee-768x911.jpg" alt="Tim with Growband" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top center;">
+        </div>
+        <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:16px 0 0;">Month 6 · Verified result</p>
+      </div>
+
     </div>
 
-    <!-- Amir's Progress -->
-    <div style="background:var(--ink);border-radius:24px;padding:clamp(36px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center;" class="r amir-grid">
-      <div>
-        <span style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-bottom:16px;">Case Study</span>
-        <h3 style="font-size:clamp(24px,3vw,38px);font-weight:800;letter-spacing:-.025em;line-height:1.1;color:#fff;margin-bottom:16px;">
-          Amir's Progress<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:rgba(255,255,255,.5);">with the Growband</em>
-        </h3>
-        <p style="font-size:15.5px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:28px;">
-          Amir started noticing hair loss at 28. After 5 months of consistent daily use, the results speak for themselves — improved density, reduced recession, and renewed confidence.
-        </p>
-        <div style="display:flex;gap:28px;margin-bottom:32px;">
-          <div>
-            <p style="font-size:32px;font-weight:800;color:#fff;letter-spacing:-.03em;margin:0;">5</p>
-            <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin:4px 0 0;font-family:var(--mono);">MONTHS</p>
-          </div>
-          <div style="width:1px;background:rgba(255,255,255,.12);"></div>
-          <div>
-            <p style="font-size:32px;font-weight:800;color:#fff;letter-spacing:-.03em;margin:0;">10</p>
-            <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin:4px 0 0;font-family:var(--mono);">MIN/DAY</p>
-          </div>
-          <div style="width:1px;background:rgba(255,255,255,.12);"></div>
-          <div>
-            <p style="font-size:32px;font-weight:800;color:var(--accent);letter-spacing:-.03em;margin:0;">✓</p>
-            <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin:4px 0 0;font-family:var(--mono);">VERIFIED</p>
-          </div>
+    <!-- Divider -->
+    <div style="height:1px;background:var(--border);margin-bottom:80px;" class="r"></div>
+
+    <!-- ── AMIR'S PROGRESS ─────────────────────────── -->
+    <div style="text-align:center;margin-bottom:52px;">
+      <span class="tag r" style="display:inline-block;">Case study</span>
+      <h2 style="font-size:clamp(28px,3.5vw,50px);font-weight:800;letter-spacing:-.028em;line-height:1.08;margin-bottom:12px;" class="r" data-d="1">
+        Amir's Progress<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">with the Growband</em>
+      </h2>
+      <p style="font-size:15.5px;color:var(--ink-light);max-width:480px;margin:0 auto;line-height:1.7;" class="r" data-d="2">
+        14 months tracked. No drugs, no surgery. Just daily use — and the results are undeniable.
+      </p>
+    </div>
+
+    <!-- 5-photo timeline -->
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:32px;" class="amir-timeline r" data-d="3">
+
+      <div style="text-align:center;">
+        <div style="border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--bg-alt);border:1px solid var(--border);margin-bottom:14px;transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/12/amir-10-24.jpg" alt="Amir Oct 2024" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top center;">
         </div>
-        <blockquote style="border-left:3px solid var(--accent);padding-left:20px;margin:0;">
-          <p style="font-size:16px;color:rgba(255,255,255,.7);line-height:1.7;font-style:italic;margin:0 0 8px;">"I was skeptical at first. Now I'd recommend this to any man dealing with early hair loss."</p>
-          <cite style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);font-style:normal;">— Amir K., London · Verified buyer</cite>
-        </blockquote>
+        <p style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-light);text-transform:uppercase;margin:0;">Oct 2024</p>
+        <p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:4px 0 0;">Start</p>
       </div>
-      <div style="position:relative;">
-        <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:rgba(255,255,255,.05);">
-          <img src="https://www.hairguard.com/wp-content/uploads/2024/11/Rashid-BA.jpg" alt="Amir progress" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+
+      <div style="text-align:center;">
+        <div style="border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--bg-alt);border:1px solid var(--border);margin-bottom:14px;transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/12/amir-02-25.jpg" alt="Amir Feb 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top center;">
         </div>
-        <div style="position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:rgba(249,251,251,.96);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:10px;padding:12px 20px;white-space:nowrap;box-shadow:0 12px 32px rgba(26,43,48,.15);">
-          <p style="font-family:var(--mono);font-size:10.5px;color:var(--ink-light);text-transform:uppercase;letter-spacing:.1em;margin:0 0 3px;">Before → After</p>
-          <p style="font-size:14px;font-weight:700;color:var(--ink);margin:0;">5 months · Growband Pro</p>
+        <p style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-light);text-transform:uppercase;margin:0;">Feb 2025</p>
+        <p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:4px 0 0;">4 months</p>
+      </div>
+
+      <div style="text-align:center;">
+        <div style="border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--bg-alt);border:2px solid rgba(44,95,122,.2);margin-bottom:14px;transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/12/amir-05-25.jpg" alt="Amir May 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top center;">
+        </div>
+        <p style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin:0;">May 2025</p>
+        <p style="font-size:12.5px;font-weight:700;color:var(--accent);margin:4px 0 0;">7 months</p>
+      </div>
+
+      <div style="text-align:center;">
+        <div style="border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--bg-alt);border:1px solid var(--border);margin-bottom:14px;transition:transform .35s,box-shadow .35s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(26,43,48,.12)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/12/amir-08-25.jpg" alt="Amir Aug 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top center;">
+        </div>
+        <p style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-light);text-transform:uppercase;margin:0;">Aug 2025</p>
+        <p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:4px 0 0;">10 months</p>
+      </div>
+
+      <div style="text-align:center;">
+        <div style="border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--bg-alt);border:2px solid var(--accent);margin-bottom:14px;transition:transform .35s,box-shadow .35s;box-shadow:0 8px 28px rgba(44,95,122,.15);" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 52px rgba(44,95,122,.25)'" onmouseleave="this.style.transform='';this.style.boxShadow='0 8px 28px rgba(44,95,122,.15)'">
+          <img src="https://www.hairguard.com/wp-content/uploads/2025/12/amir-12-25.jpg" alt="Amir Dec 2025" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top center;">
+        </div>
+        <p style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin:0;">Dec 2025</p>
+        <p style="font-size:12.5px;font-weight:700;color:var(--accent);margin:4px 0 0;">14 months ✓</p>
+      </div>
+
+    </div>
+
+    <!-- Amir quote strip -->
+    <div style="background:var(--ink);border-radius:16px;padding:32px 40px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;" class="r" data-d="4">
+      <div style="flex:1;min-width:260px;">
+        <p style="font-size:18px;color:#fff;line-height:1.65;font-style:italic;margin:0 0 12px;">"I was skeptical at first. 14 months later, the results speak for themselves. I'd recommend this to any man dealing with hair loss."</p>
+        <cite style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.4);font-style:normal;letter-spacing:.06em;">— AMIR K. · LONDON · VERIFIED BUYER</cite>
+      </div>
+      <div style="display:flex;gap:24px;flex-shrink:0;">
+        <div style="text-align:center;">
+          <p style="font-size:36px;font-weight:800;color:#fff;letter-spacing:-.03em;margin:0;line-height:1;">14</p>
+          <p style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;margin:6px 0 0;">Months</p>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+        <div style="text-align:center;">
+          <p style="font-size:36px;font-weight:800;color:#fff;letter-spacing:-.03em;margin:0;line-height:1;">10</p>
+          <p style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;margin:6px 0 0;">Min/day</p>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,.1);"></div>
+        <div style="text-align:center;">
+          <p style="font-size:36px;font-weight:800;color:var(--accent);letter-spacing:-.03em;margin:0;line-height:1;">✓</p>
+          <p style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;margin:6px 0 0;">Verified</p>
         </div>
       </div>
     </div>
