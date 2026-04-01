@@ -684,6 +684,9 @@
       .faq-grid { grid-template-columns: 1fr; }
       .footer__top { grid-template-columns: 1fr 1fr; }
       .stats-strip .wrap { grid-template-columns: 1fr 1fr; }
+      .auto-grid { grid-template-columns: repeat(2,1fr) !important; }
+      .inc-grid { grid-template-columns: repeat(2,1fr) !important; }
+      .kit-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
     }
     @media (max-width: 768px) {
       .nav__links { display: none; }
@@ -695,6 +698,8 @@
       .price-grid { grid-template-columns: 1fr; }
       .ing-grid { grid-template-columns: 1fr; gap: 12px; }
       .footer__top { grid-template-columns: 1fr 1fr; }
+      .auto-grid { grid-template-columns: 1fr !important; }
+      .inc-grid { grid-template-columns: repeat(2,1fr) !important; }
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .stats-strip .wrap { grid-template-columns: 1fr 1fr; }
       .cta-band-btns { flex-direction: column; align-items: center; }
@@ -1384,39 +1389,181 @@
       </ul>
     </div>
 
-    <!-- Video embeds -->
-    <div style="margin-top:72px;">
-      <span class="tag r">Watch it in action</span>
-      <h2 class="ttl r" data-d="1">See the <em>Growband Pro</em> for yourself</h2>
-      <p class="sub r" data-d="2" style="margin-bottom:40px;">Real customers, real use — watch how the Growband Pro fits into a daily routine and the results people are seeing.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="r" data-d="3">
-        <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000;">
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLSearch_hairguard_growband"
-            title="Hairguard Growband Pro — How to use"
-            style="width:100%;height:100%;border:none;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+  </div>
+</section>
+
+<!-- ============================================================
+     FULLY AUTOMATED AND HANDS-FREE
+============================================================ -->
+<section style="padding:var(--sec-py) 0;background:var(--ink);">
+  <div class="sec" style="padding-top:0;padding-bottom:0;">
+
+    <div style="text-align:center;margin-bottom:60px;">
+      <span class="tag r" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.12);display:inline-block;">Technology</span>
+      <h2 style="font-size:clamp(28px,4vw,52px);font-weight:700;letter-spacing:-.022em;line-height:1.1;color:#fff;margin-bottom:16px;" class="r" data-d="1">
+        Fully Automated<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:rgba(255,255,255,.6);">and Hands-Free</em>
+      </h2>
+      <p style="font-size:15.5px;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto;" class="r" data-d="2">
+        The Growband Pro handles everything — so you can get on with your day while it works.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;" class="auto-grid">
+
+      <!-- Battery Powered -->
+      <div class="r" data-d="1" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Tubing.gif" alt="Battery Powered" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
         </div>
-        <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000;">
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLSearch_hairguard_results"
-            title="Hairguard — Real customer results"
-            style="width:100%;height:100%;border:none;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <div style="padding:20px 24px 28px;">
+          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Battery Powered</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">Rechargeable battery that lasts around 120 minutes — almost 2 weeks of daily sessions.</p>
         </div>
       </div>
-      <!-- YouTube channel link -->
-      <div style="margin-top:24px;text-align:center;" class="r" data-d="4">
-        <a href="https://www.youtube.com/@hairguard" target="_blank" rel="noopener" class="btn btn-ghost">
-          Watch more on YouTube
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+
+      <!-- Hands-Free -->
+      <div class="r" data-d="2" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Hands-free-zoomed.gif" alt="Hands-Free" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+        </div>
+        <div style="padding:20px 24px 28px;">
+          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Hands-Free</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">Clip the controller onto a belt or put it in your pocket — totally hands-free while it runs.</p>
+        </div>
+      </div>
+
+      <!-- Rechargeable -->
+      <div class="r" data-d="3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Rechargeable.gif" alt="Rechargeable" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+        </div>
+        <div style="padding:20px 24px 28px;">
+          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Rechargeable</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">USB-C cable included. Takes just 30 minutes to fully recharge and you're ready to go again.</p>
+        </div>
+      </div>
+
+      <!-- Saveable Settings -->
+      <div class="r" data-d="4" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Saving.gif" alt="Saveable Settings" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+        </div>
+        <div style="padding:20px 24px 28px;">
+          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Saveable Settings</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">Save your perfect settings so each session starts instantly — quick and effortless every time.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     WHAT'S INCLUDED?
+============================================================ -->
+<section style="padding:var(--sec-py) 0;background:var(--bg);">
+  <div class="sec" style="padding-top:0;padding-bottom:0;">
+
+    <div style="text-align:center;margin-bottom:52px;">
+      <span class="tag r" style="display:inline-block;">In the box</span>
+      <h2 style="font-size:clamp(28px,4vw,52px);font-weight:700;letter-spacing:-.022em;line-height:1.1;margin-bottom:16px;" class="r" data-d="1">
+        What's <em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">included?</em>
+      </h2>
+      <p style="font-size:15.5px;color:var(--ink-light);max-width:480px;margin:0 auto;" class="r" data-d="2">
+        Everything you need to start growing — right out of the box.
+      </p>
+    </div>
+
+    <!-- 4 item thumbnails -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:64px;" class="inc-grid">
+
+      <div class="r" data-d="1" style="text-align:center;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Headset.png" alt="Growband Pro" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        </div>
+        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Growband Pro</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">Patent-pending device</p>
+      </div>
+
+      <div class="r" data-d="2" style="text-align:center;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/02.png" alt="Controller" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        </div>
+        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Controller</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">Belt-clip included</p>
+      </div>
+
+      <div class="r" data-d="3" style="text-align:center;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Pro-Case.png" alt="Carry Case" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        </div>
+        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Carry Case</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">Travel-ready storage</p>
+      </div>
+
+      <div class="r" data-d="4" style="text-align:center;">
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:28px 20px;margin-bottom:14px;transition:box-shadow .3s;" onmouseenter="this.style.boxShadow='0 8px 28px rgba(26,43,48,.1)'" onmouseleave="this.style.boxShadow=''">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Charging-Cable.png" alt="Charging Cable" loading="lazy" style="width:100%;max-width:140px;height:120px;object-fit:contain;">
+        </div>
+        <p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Charging Cable</p>
+        <p style="font-size:12.5px;color:var(--ink-light);margin:4px 0 0;">USB-C, fast charge</p>
+      </div>
+
+    </div>
+
+    <!-- Kit photo + features + price -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;" class="kit-grid">
+
+      <!-- Kit photo -->
+      <div class="r" data-d="1">
+        <div style="border-radius:20px;overflow:hidden;background:var(--bg-alt);border:1px solid var(--border);">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Case-Open.jpg" alt="Growband Pro kit" loading="lazy" style="width:100%;display:block;" onerror="this.src='https://www.hairguard.com/wp-content/uploads/2023/02/Growband-Pro-V2.png'">
+        </div>
+      </div>
+
+      <!-- Features + CTA -->
+      <div class="r" data-d="2">
+        <span class="tag" style="display:inline-block;margin-bottom:20px;">Complete kit</span>
+        <h3 style="font-size:clamp(22px,3vw,36px);font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:24px;">
+          Everything you need,<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">ready on day one</em>
+        </h3>
+
+        <ul style="list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:14px;">
+          <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--ink);">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:1px"><circle cx="10" cy="10" r="9" stroke="var(--accent)" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Increases Blood Flow To The Scalp</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--ink);">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:1px"><circle cx="10" cy="10" r="9" stroke="var(--accent)" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Fully Adjustable — fits all head sizes</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--ink);">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:1px"><circle cx="10" cy="10" r="9" stroke="var(--accent)" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Hands-Free &amp; Automated Sessions</span>
+          </li>
+          <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--ink);">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:1px"><circle cx="10" cy="10" r="9" stroke="var(--accent)" stroke-width="1.5"/><path d="M6.5 10.5l2.5 2.5 4.5-5" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>USB-C Rechargeable — 30 min full charge</span>
+          </li>
+        </ul>
+
+        <!-- Price + CTA -->
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:16px;padding:24px 28px;">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:6px;">
+            <span style="font-size:13px;color:var(--ink-light);text-decoration:line-through;">$497</span>
+            <span style="font-size:36px;font-weight:800;color:var(--ink);letter-spacing:-.03em;">$397</span>
+          </div>
+          <p style="font-size:13px;color:var(--ink-light);margin:0 0 20px;">Free shipping · 60-day money-back guarantee</p>
+          <a href="https://www.hairguard.com/growband-pro/" target="_blank" rel="noopener"
+            style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 28px;background:var(--ink);color:#fff;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;letter-spacing:-.01em;transition:background .2s,transform .15s;"
+            onmouseenter="this.style.background='var(--accent)';this.style.transform='translateY(-1px)'"
+            onmouseleave="this.style.background='var(--ink)';this.style.transform=''">
+            Add to Cart
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
