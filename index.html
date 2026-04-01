@@ -684,7 +684,7 @@
       .faq-grid { grid-template-columns: 1fr; }
       .footer__top { grid-template-columns: 1fr 1fr; }
       .stats-strip .wrap { grid-template-columns: 1fr 1fr; }
-      .auto-grid { grid-template-columns: repeat(2,1fr) !important; }
+      .auto-grid { grid-template-columns: repeat(2,1fr) !important; border-radius: 16px; }
       .inc-grid { grid-template-columns: repeat(2,1fr) !important; }
       .kit-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
     }
@@ -698,7 +698,8 @@
       .price-grid { grid-template-columns: 1fr; }
       .ing-grid { grid-template-columns: 1fr; gap: 12px; }
       .footer__top { grid-template-columns: 1fr 1fr; }
-      .auto-grid { grid-template-columns: 1fr !important; }
+      .auto-grid { grid-template-columns: 1fr !important; border-radius: 12px; }
+      .auto-feat { border-radius: 0 !important; }
       .inc-grid { grid-template-columns: repeat(2,1fr) !important; }
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .stats-strip .wrap { grid-template-columns: 1fr 1fr; }
@@ -1395,62 +1396,86 @@
 <!-- ============================================================
      FULLY AUTOMATED AND HANDS-FREE
 ============================================================ -->
-<section style="padding:var(--sec-py) 0;background:var(--ink);">
-  <div class="sec" style="padding-top:0;padding-bottom:0;">
+<section style="padding:100px 0 120px;background:var(--ink);position:relative;overflow:hidden;">
+  <!-- Subtle radial glow behind heading -->
+  <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:900px;height:500px;background:radial-gradient(ellipse at center top, rgba(44,95,122,.35) 0%, transparent 70%);pointer-events:none;"></div>
 
-    <div style="text-align:center;margin-bottom:60px;">
-      <span class="tag r" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.12);display:inline-block;">Technology</span>
-      <h2 style="font-size:clamp(28px,4vw,52px);font-weight:700;letter-spacing:-.022em;line-height:1.1;color:#fff;margin-bottom:16px;" class="r" data-d="1">
-        Fully Automated<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:rgba(255,255,255,.6);">and Hands-Free</em>
+  <div class="sec" style="padding-top:0;padding-bottom:0;position:relative;">
+
+    <div style="text-align:center;margin-bottom:72px;">
+      <span class="r" style="display:inline-block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:rgba(44,95,122,.18);border:1px solid rgba(44,95,122,.35);border-radius:100px;padding:6px 16px;margin-bottom:20px;">Technology</span>
+      <h2 style="font-size:clamp(36px,5vw,68px);font-weight:800;letter-spacing:-.03em;line-height:1.05;color:#fff;margin-bottom:20px;" class="r" data-d="1">
+        Fully Automated
+        <br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:rgba(255,255,255,.45);">and Hands-Free</em>
       </h2>
-      <p style="font-size:15.5px;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto;" class="r" data-d="2">
+      <p style="font-size:17px;color:rgba(255,255,255,.5);max-width:540px;margin:0 auto;line-height:1.7;" class="r" data-d="2">
         The Growband Pro handles everything — so you can get on with your day while it works.
       </p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;" class="auto-grid">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08);" class="auto-grid">
 
       <!-- Battery Powered -->
-      <div class="r" data-d="1" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Tubing.gif" alt="Battery Powered" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+      <div class="r auto-feat" data-d="1" style="background:rgba(255,255,255,.04);padding:0;transition:background .3s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.04)'">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#0d1f24;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Tubing.gif" alt="Battery Powered" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div style="padding:20px 24px 28px;">
-          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Battery Powered</h3>
-          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">Rechargeable battery that lasts around 120 minutes — almost 2 weeks of daily sessions.</p>
+        <div style="padding:28px 28px 36px;border-top:1px solid rgba(255,255,255,.07);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="width:28px;height:28px;border-radius:8px;background:rgba(44,95,122,.3);border:1px solid rgba(44,95,122,.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="4" width="10" height="6" rx="1.5" stroke="rgba(255,255,255,.7)" stroke-width="1.2"/><path d="M11 6.5h2" stroke="rgba(255,255,255,.7)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 style="font-size:17px;font-weight:700;color:#fff;margin:0;letter-spacing:-.02em;">Battery Powered</h3>
+          </div>
+          <p style="font-size:14.5px;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">Rechargeable battery lasting ~120 minutes — nearly 2 weeks of daily sessions per charge.</p>
         </div>
       </div>
 
       <!-- Hands-Free -->
-      <div class="r" data-d="2" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Hands-free-zoomed.gif" alt="Hands-Free" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+      <div class="r auto-feat" data-d="2" style="background:rgba(255,255,255,.04);padding:0;transition:background .3s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.04)'">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#0d1f24;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Hands-free-zoomed.gif" alt="Hands-Free" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div style="padding:20px 24px 28px;">
-          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Hands-Free</h3>
-          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">Clip the controller onto a belt or put it in your pocket — totally hands-free while it runs.</p>
+        <div style="padding:28px 28px 36px;border-top:1px solid rgba(255,255,255,.07);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="width:28px;height:28px;border-radius:8px;background:rgba(44,95,122,.3);border:1px solid rgba(44,95,122,.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 3v5a3 3 0 006 0V3" stroke="rgba(255,255,255,.7)" stroke-width="1.2" stroke-linecap="round"/><path d="M2 13h10" stroke="rgba(255,255,255,.7)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 style="font-size:17px;font-weight:700;color:#fff;margin:0;letter-spacing:-.02em;">Hands-Free</h3>
+          </div>
+          <p style="font-size:14.5px;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">Clip the controller to your belt or drop it in a pocket. Completely hands-free while it runs.</p>
         </div>
       </div>
 
       <!-- Rechargeable -->
-      <div class="r" data-d="3" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Rechargeable.gif" alt="Rechargeable" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+      <div class="r auto-feat" data-d="3" style="background:rgba(255,255,255,.04);padding:0;transition:background .3s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.04)'">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#0d1f24;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Rechargeable.gif" alt="Rechargeable" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div style="padding:20px 24px 28px;">
-          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Rechargeable</h3>
-          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">USB-C cable included. Takes just 30 minutes to fully recharge and you're ready to go again.</p>
+        <div style="padding:28px 28px 36px;border-top:1px solid rgba(255,255,255,.07);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="width:28px;height:28px;border-radius:8px;background:rgba(44,95,122,.3);border:1px solid rgba(44,95,122,.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v3M7 10v3M1 7h3M10 7h3" stroke="rgba(255,255,255,.7)" stroke-width="1.2" stroke-linecap="round"/><circle cx="7" cy="7" r="2.5" stroke="rgba(255,255,255,.7)" stroke-width="1.2"/></svg>
+            </span>
+            <h3 style="font-size:17px;font-weight:700;color:#fff;margin:0;letter-spacing:-.02em;">Rechargeable</h3>
+          </div>
+          <p style="font-size:14.5px;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">USB-C cable included. Just 30 minutes to fully recharge — then you're ready to go again.</p>
         </div>
       </div>
 
       <!-- Saveable Settings -->
-      <div class="r" data-d="4" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 40px rgba(0,0,0,.3)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
-        <div style="background:rgba(255,255,255,.04);padding:28px 20px 20px;display:flex;justify-content:center;">
-          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Saving.gif" alt="Saveable Settings" loading="lazy" style="width:100%;max-width:180px;height:160px;object-fit:contain;border-radius:8px;">
+      <div class="r auto-feat" data-d="4" style="background:rgba(255,255,255,.04);padding:0;transition:background .3s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.04)'">
+        <div style="width:100%;aspect-ratio:4/3;overflow:hidden;background:#0d1f24;">
+          <img src="https://www.hairguard.com/wp-content/uploads/2023/03/Saving.gif" alt="Saveable Settings" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
-        <div style="padding:20px 24px 28px;">
-          <h3 style="font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Saveable Settings</h3>
-          <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;margin:0;">Save your perfect settings so each session starts instantly — quick and effortless every time.</p>
+        <div style="padding:28px 28px 36px;border-top:1px solid rgba(255,255,255,.07);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="width:28px;height:28px;border-radius:8px;background:rgba(44,95,122,.3);border:1px solid rgba(44,95,122,.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="2" stroke="rgba(255,255,255,.7)" stroke-width="1.2"/><path d="M5 2v3h4V2" stroke="rgba(255,255,255,.7)" stroke-width="1.2"/><path d="M4 8h6M4 10.5h4" stroke="rgba(255,255,255,.7)" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <h3 style="font-size:17px;font-weight:700;color:#fff;margin:0;letter-spacing:-.02em;">Saveable Settings</h3>
+          </div>
+          <p style="font-size:14.5px;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">Save your perfect settings so every session starts instantly — quick and effortless every time.</p>
         </div>
       </div>
 
