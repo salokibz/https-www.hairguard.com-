@@ -342,16 +342,43 @@
     /* ============================================================
        HOW IT WORKS STEPS
     ============================================================ */
-    .steps-row { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .step { padding: clamp(30px,4vw,50px) clamp(22px,3vw,42px); border-left: 1px solid var(--border); }
-    .step:first-child { border-left: none; }
-    .step__n { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--ink-light); margin-bottom: 20px; }
-    .step__icon {
-      width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+    .steps-row {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
+      margin-top: 8px;
     }
-    .step__title { font-size: 18px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 10px; }
-    .step__desc { font-size: 13.5px; line-height: 1.72; color: var(--ink-light); }
+    .step {
+      padding: clamp(32px,4vw,48px) clamp(26px,3vw,40px);
+      border: 1px solid var(--border); border-radius: 14px;
+      background: var(--bg); position: relative; overflow: hidden;
+      transition: transform .3s cubic-bezier(.25,.46,.45,.94),
+                  box-shadow .3s cubic-bezier(.25,.46,.45,.94),
+                  border-color .3s;
+    }
+    .step::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .4s cubic-bezier(.25,.46,.45,.94);
+    }
+    .step:hover { transform: translateY(-4px); box-shadow: 0 20px 56px rgba(35,49,55,.09); border-color: rgba(44,95,122,.2); }
+    .step:hover::after { transform: scaleX(1); }
+    .step__n {
+      font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+      color: var(--ink-light); margin-bottom: 24px; display: block;
+    }
+    .step__icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      border: 1px solid var(--border); background: var(--bg-alt);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      transition: background .3s, border-color .3s;
+    }
+    .step:hover .step__icon { background: rgba(44,95,122,.08); border-color: rgba(44,95,122,.2); }
+    .step:hover .step__icon svg path,
+    .step:hover .step__icon svg circle { stroke: var(--accent); }
+    .step__title { font-size: 20px; font-weight: 700; letter-spacing: -.012em; margin-bottom: 12px; }
+    .step__desc { font-size: 14px; line-height: 1.75; color: var(--ink-light); }
 
     /* ============================================================
        RESULTS TIMELINE
@@ -526,9 +553,8 @@
     @media (max-width: 768px) {
       .nav__links { display: none; }
       .prod-grid { grid-template-columns: 1fr; }
-      .steps-row { grid-template-columns: 1fr; }
-      .step { border-left: none; border-top: 1px solid var(--border); padding: 30px 0; }
-      .step:first-child { border-top: none; }
+      .steps-row { grid-template-columns: 1fr; gap: 12px; }
+      .step { padding: 28px 24px; }
       .timeline { grid-template-columns: repeat(3,1fr); }
       .timeline .tl-item:nth-child(4), .timeline .tl-item:nth-child(5) { display: none; }
       .price-grid { grid-template-columns: 1fr; }
@@ -959,7 +985,7 @@
   <h2 class="ttl r" data-d="1">Simple. Consistent. <em>Effective.</em></h2>
   <p class="sub r" data-d="2">A three-step protocol that slots into your existing routine. No clinic visits, no prescriptions.</p>
 </section>
-<div class="wrap" style="padding:0 var(--pad-x) var(--sec-py); max-width:var(--max-w); margin:0 auto;">
+<div class="wrap" style="padding-bottom:var(--sec-py);">
   <div class="steps-row">
     <div class="step r" data-d="1">
       <p class="step__n">01</p>
@@ -1005,15 +1031,15 @@
         <p style="font-size:15px;line-height:1.72;color:var(--ink-light);margin-bottom:12px;">The Growband Pro sits comfortably on your head with the soft inside cushioning and neck support.</p>
         <p style="font-size:14px;line-height:1.68;color:var(--ink-light);">It can be easily adjusted to fit all head sizes.</p>
       </div>
-      <div class="r rr" data-d="2" style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://www.hairguard.com/wp-content/uploads/2025/10/relax-chair.jpg" alt="Step 1 — Placing the Growband Pro on head" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+      <div class="r rr" data-d="2" style="border-radius:12px;overflow:hidden;aspect-ratio:1/1;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;">
+        <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Step1.gif" alt="Step 1 — Place Growband Pro on head" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
 
     <!-- Step 2 -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;margin-bottom:72px;">
-      <div class="r rl" data-d="1" style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;order:1;">
-        <img src="https://www.hairguard.com/wp-content/uploads/2023/06/Growband-Hero-2-300x300.jpg" alt="Step 2 — Growband Pro controller" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+      <div class="r rl" data-d="1" style="border-radius:12px;overflow:hidden;aspect-ratio:1/1;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;order:1;">
+        <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Step-2.gif" alt="Step 2 — Connect the controller" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
       <div class="r rr" data-d="2" style="order:2;">
         <p style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink-light);margin-bottom:16px;">STEP 02</p>
@@ -1035,8 +1061,8 @@
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <div class="r rr" data-d="2" style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
-        <img src="https://www.hairguard.com/wp-content/uploads/2025/10/relax-chair.jpg" alt="Step 3 — Sit back and relax with Growband Pro" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+      <div class="r rr" data-d="2" style="border-radius:12px;overflow:hidden;aspect-ratio:1/1;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;">
+        <img src="https://www.hairguard.com/wp-content/uploads/2023/02/Diagonal.gif" alt="Step 3 — Sit back and relax" loading="lazy" style="width:100%;height:100%;object-fit:contain;">
       </div>
     </div>
 
