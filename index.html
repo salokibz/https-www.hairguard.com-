@@ -202,15 +202,21 @@
     /* ============================================================
        PRESS BAR
     ============================================================ */
-    .press { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 0; }
-    .press .wrap { display: flex; align-items: center; gap: 36px; flex-wrap: wrap; }
-    .press__label { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-light); white-space: nowrap; }
-    .press__logos { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
-    .press__logo {
-      font-family: var(--serif); font-size: 17px; font-weight: 400;
-      color: var(--ink); opacity: .28; letter-spacing: .02em; transition: opacity .2s;
+    .press { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 0; background: var(--bg); }
+    .press .wrap { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .press__label {
+      font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--ink); opacity: .45;
+      white-space: nowrap; padding-right: 16px;
+      border-right: 1px solid var(--border);
     }
-    .press__logo:hover { opacity: .6; }
+    .press__logos { display: flex; gap: 36px; align-items: center; flex-wrap: wrap; }
+    .press__logo {
+      font-family: var(--serif); font-size: 19px; font-weight: 600;
+      color: var(--ink); opacity: .55; letter-spacing: .01em;
+      transition: opacity .2s, transform .2s;
+    }
+    .press__logo:hover { opacity: 1; transform: translateY(-1px); }
 
     /* ============================================================
        STATS STRIP
@@ -566,6 +572,7 @@
       <span class="press__logo">The Guardian</span>
       <span class="press__logo">BBC</span>
     </div>
+
   </div>
 </div>
 
