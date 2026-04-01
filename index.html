@@ -574,6 +574,98 @@
     .footer__mono { font-family: var(--mono); font-size: 10.5px; color: var(--ink-light); }
 
     /* ============================================================
+       BEFORE / AFTER SLIDER
+    ============================================================ */
+    .ba-grid { }
+    .ba-card {
+      border-radius: 14px; overflow: hidden;
+      background: var(--bg); border: 1px solid var(--border);
+      transition: transform .3s cubic-bezier(.25,.46,.45,.94), box-shadow .3s;
+    }
+    .ba-card:hover { transform: translateY(-4px); box-shadow: 0 20px 52px rgba(35,49,55,.1); }
+
+    .ba-slider {
+      position: relative; aspect-ratio: 1 / 1;
+      overflow: hidden; cursor: col-resize;
+      user-select: none; -webkit-user-select: none;
+    }
+    .ba-before, .ba-after {
+      position: absolute; inset: 0;
+    }
+    .ba-before img, .ba-after img {
+      width: 100%; height: 100%; object-fit: cover;
+      pointer-events: none; display: block;
+    }
+    /* "after" is clipped on the right — JS updates clip-path */
+    .ba-after {
+      clip-path: inset(0 50% 0 0);
+      transition: clip-path 0s; /* instant during drag */
+    }
+
+    /* Before / After labels */
+    .ba-lbl {
+      position: absolute; bottom: 12px;
+      font-family: var(--mono); font-size: 10px; font-weight: 500;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 4px;
+      pointer-events: none;
+    }
+    .ba-lbl--before {
+      left: 12px; background: rgba(0,0,0,.45); color: #fff;
+    }
+    .ba-lbl--after {
+      right: 12px; background: rgba(44,95,122,.85); color: #fff;
+    }
+
+    /* Drag handle */
+    .ba-handle {
+      position: absolute; top: 0; bottom: 0;
+      left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center;
+      pointer-events: none; z-index: 10;
+      transition: left 0s;
+    }
+    .ba-handle__line {
+      flex: 1; width: 2px;
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 0 6px rgba(0,0,0,.3);
+    }
+    .ba-handle__btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--accent);
+      border: 2.5px solid #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,.25);
+      flex-shrink: 0;
+      transition: transform .2s, background .2s;
+    }
+    .ba-slider:hover .ba-handle__btn { transform: scale(1.1); }
+    .ba-slider.dragging .ba-handle__btn { background: #1A4558; transform: scale(1.15); }
+
+    /* hint animation on load — wiggles handle once */
+    @keyframes baHint {
+      0%   { left: 50%; }
+      25%  { left: 35%; }
+      75%  { left: 65%; }
+      100% { left: 50%; }
+    }
+    .ba-slider.hint { animation: baHint 1.2s cubic-bezier(.45,.05,.55,.95) 0.6s 1 forwards; }
+
+    .ba-caption {
+      padding: 14px 18px; font-size: 14px; font-weight: 600;
+      color: var(--ink); border-top: 1px solid var(--border);
+      margin: 0;
+    }
+    .ba-caption span { color: var(--ink-light); font-weight: 400; }
+
+    @media (max-width: 768px) {
+      .ba-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 1024px) {
+      .ba-grid { grid-template-columns: repeat(2,1fr) !important; }
+    }
+
+    /* ============================================================
        SVG HELPERS
     ============================================================ */
     .ico-check { display: inline-flex; }
@@ -1332,6 +1424,94 @@
 </section>
 
 <!-- ============================================================
+     MORE MEN ARE CHOOSING — BEFORE/AFTER GALLERY
+============================================================ -->
+<section style="padding:var(--sec-py) 0; background:var(--bg-alt);">
+  <div class="sec" style="padding-top:0;padding-bottom:0;">
+
+    <div style="text-align:center;margin-bottom:60px;">
+      <span class="tag r" style="display:block;text-align:center;">Verified customer results</span>
+      <h2 style="font-size:clamp(28px,4vw,52px);font-weight:700;letter-spacing:-.022em;line-height:1.1;margin-bottom:0;" class="r" data-d="1">
+        More and more men are choosing to<br><em style="font-style:italic;font-family:var(--serif);font-weight:400;color:var(--accent);">reverse hair loss with the Growband</em>
+      </h2>
+    </div>
+
+    <!-- Before/After Sliders Grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="ba-grid">
+
+      <!-- Mark -->
+      <div class="ba-card r" data-d="1">
+        <div class="ba-slider" data-before="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1.jpg" data-after="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1-1.jpg">
+          <div class="ba-before"><img src="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1.jpg" alt="Mark before" loading="lazy"><span class="ba-lbl ba-lbl--before">Before</span></div>
+          <div class="ba-after"><img src="https://www.hairguard.com/wp-content/uploads/2024/09/mark-before-after-1-1.jpg" alt="Mark after" loading="lazy"><span class="ba-lbl ba-lbl--after">After</span></div>
+          <div class="ba-handle"><div class="ba-handle__line"></div><div class="ba-handle__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle__line"></div></div>
+        </div>
+        <p class="ba-caption">Mark &mdash; <span>6 months</span></p>
+      </div>
+
+      <!-- Deepak -->
+      <div class="ba-card r" data-d="2">
+        <div class="ba-slider" data-before="https://www.hairguard.com/wp-content/uploads/2023/06/Deepak-before-and-after.jpg" data-after="https://www.hairguard.com/wp-content/uploads/2023/06/Deepak-before-and-after.jpg">
+          <div class="ba-before"><img src="https://www.hairguard.com/wp-content/uploads/2023/06/Deepak-before-and-after.jpg" alt="Deepak before" loading="lazy" style="object-position:left center;"><span class="ba-lbl ba-lbl--before">Before</span></div>
+          <div class="ba-after"><img src="https://www.hairguard.com/wp-content/uploads/2023/06/Deepak-before-and-after.jpg" alt="Deepak after" loading="lazy" style="object-position:right center;"><span class="ba-lbl ba-lbl--after">After</span></div>
+          <div class="ba-handle"><div class="ba-handle__line"></div><div class="ba-handle__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle__line"></div></div>
+        </div>
+        <p class="ba-caption">Deepak &mdash; <span>6 months</span></p>
+      </div>
+
+      <!-- JK -->
+      <div class="ba-card r" data-d="3">
+        <div class="ba-slider" data-before="https://www.hairguard.com/wp-content/uploads/2023/06/JK-Before-After.jpg" data-after="https://www.hairguard.com/wp-content/uploads/2023/06/JK-Before-After.jpg">
+          <div class="ba-before"><img src="https://www.hairguard.com/wp-content/uploads/2023/06/JK-Before-After.jpg" alt="JK before" loading="lazy" style="object-position:left center;"><span class="ba-lbl ba-lbl--before">Before</span></div>
+          <div class="ba-after"><img src="https://www.hairguard.com/wp-content/uploads/2023/06/JK-Before-After.jpg" alt="JK after" loading="lazy" style="object-position:right center;"><span class="ba-lbl ba-lbl--after">After</span></div>
+          <div class="ba-handle"><div class="ba-handle__line"></div><div class="ba-handle__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle__line"></div></div>
+        </div>
+        <p class="ba-caption">JK &mdash; <span>3 months</span></p>
+      </div>
+
+      <!-- Andrew -->
+      <div class="ba-card r" data-d="1">
+        <div class="ba-slider" data-before="https://www.hairguard.com/wp-content/uploads/2025/02/andrew-ba.jpg" data-after="https://www.hairguard.com/wp-content/uploads/2025/02/andrew-ba.jpg">
+          <div class="ba-before"><img src="https://www.hairguard.com/wp-content/uploads/2025/02/andrew-ba.jpg" alt="Andrew before" loading="lazy" style="object-position:left center;"><span class="ba-lbl ba-lbl--before">Before</span></div>
+          <div class="ba-after"><img src="https://www.hairguard.com/wp-content/uploads/2025/02/andrew-ba.jpg" alt="Andrew after" loading="lazy" style="object-position:right center;"><span class="ba-lbl ba-lbl--after">After</span></div>
+          <div class="ba-handle"><div class="ba-handle__line"></div><div class="ba-handle__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle__line"></div></div>
+        </div>
+        <p class="ba-caption">Andrew &mdash; <span>6 months</span></p>
+      </div>
+
+      <!-- Rashid -->
+      <div class="ba-card r" data-d="2">
+        <div class="ba-slider" data-before="https://www.hairguard.com/wp-content/uploads/2024/11/Rashid-BA.jpg" data-after="https://www.hairguard.com/wp-content/uploads/2024/11/Rashid-BA.jpg">
+          <div class="ba-before"><img src="https://www.hairguard.com/wp-content/uploads/2024/11/Rashid-BA.jpg" alt="Rashid before" loading="lazy" style="object-position:left center;"><span class="ba-lbl ba-lbl--before">Before</span></div>
+          <div class="ba-after"><img src="https://www.hairguard.com/wp-content/uploads/2024/11/Rashid-BA.jpg" alt="Rashid after" loading="lazy" style="object-position:right center;"><span class="ba-lbl ba-lbl--after">After</span></div>
+          <div class="ba-handle"><div class="ba-handle__line"></div><div class="ba-handle__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle__line"></div></div>
+        </div>
+        <p class="ba-caption">Rashid &mdash; <span>5 months</span></p>
+      </div>
+
+      <!-- Ed -->
+      <div class="ba-card r" data-d="3">
+        <div class="ba-slider" data-before="https://www.hairguard.com/wp-content/uploads/2023/06/Ed-Before-After.jpg" data-after="https://www.hairguard.com/wp-content/uploads/2023/06/Ed-Before-After.jpg">
+          <div class="ba-before"><img src="https://www.hairguard.com/wp-content/uploads/2023/06/Ed-Before-After.jpg" alt="Ed before" loading="lazy" style="object-position:left center;"><span class="ba-lbl ba-lbl--before">Before</span></div>
+          <div class="ba-after"><img src="https://www.hairguard.com/wp-content/uploads/2023/06/Ed-Before-After.jpg" alt="Ed after" loading="lazy" style="object-position:right center;"><span class="ba-lbl ba-lbl--after">After</span></div>
+          <div class="ba-handle"><div class="ba-handle__line"></div><div class="ba-handle__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8H11M5 8L3 6M5 8L3 10M11 8L13 6M11 8L13 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ba-handle__line"></div></div>
+        </div>
+        <p class="ba-caption">Ed &mdash; <span>4 months</span></p>
+      </div>
+
+    </div><!-- /ba-grid -->
+
+    <div style="text-align:center;margin-top:48px;" class="r" data-d="3">
+      <a href="https://www.hairguard.com/growband-pro/" class="btn btn-dark btn-lg">
+        Get Growband Pro — $497
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
      RESULTS
 ============================================================ -->
 <section id="results" class="sec">
@@ -1702,6 +1882,67 @@
   }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
 
   document.querySelectorAll('.r:not(.on)').forEach(el => io.observe(el));
+
+  // ============================================================
+  // BEFORE / AFTER SLIDERS
+  // ============================================================
+  function initSlider(slider) {
+    const after  = slider.querySelector('.ba-after');
+    const handle = slider.querySelector('.ba-handle');
+    let dragging = false;
+
+    function setPos(pct) {
+      pct = Math.min(96, Math.max(4, pct));
+      after.style.clipPath  = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left     = pct + '%';
+    }
+
+    function getPct(e) {
+      const rect = slider.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      return ((clientX - rect.left) / rect.width) * 100;
+    }
+
+    // Start drag
+    slider.addEventListener('mousedown',  e => { dragging = true; slider.classList.add('dragging'); setPos(getPct(e)); e.preventDefault(); });
+    slider.addEventListener('touchstart', e => { dragging = true; slider.classList.add('dragging'); setPos(getPct(e)); }, { passive: true });
+
+    // Move
+    window.addEventListener('mousemove',  e => { if (dragging) setPos(getPct(e)); });
+    window.addEventListener('touchmove',  e => { if (dragging) setPos(getPct(e)); }, { passive: true });
+
+    // End drag
+    window.addEventListener('mouseup',  () => { dragging = false; slider.classList.remove('dragging'); });
+    window.addEventListener('touchend', () => { dragging = false; slider.classList.remove('dragging'); });
+
+    // Start at 50%
+    setPos(50);
+
+    // Hint wiggle once when slider enters viewport
+    const hintIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          // animate clip-path for the hint
+          let start = null;
+          const dur = 1400;
+          const hintAnim = (ts) => {
+            if (!start) start = ts;
+            const p = Math.min((ts - start) / dur, 1);
+            // ease in-out sine wave: 50 → 30 → 70 → 50
+            const wave = 50 + 20 * Math.sin(p * Math.PI * 2) * (1 - p);
+            setPos(wave);
+            if (p < 1) requestAnimationFrame(hintAnim);
+            else setPos(50);
+          };
+          setTimeout(() => requestAnimationFrame(hintAnim), 500);
+          hintIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    hintIO.observe(slider);
+  }
+
+  document.querySelectorAll('.ba-slider').forEach(initSlider);
 </script>
 </body>
 </html>
